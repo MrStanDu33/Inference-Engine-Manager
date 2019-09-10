@@ -371,14 +371,11 @@ class TableApp
 	{
 		let self = this;
 		this.container.find("tbody").nestedSortable({
-			forcePlaceholderSize: true,
-			handle: 'div',
+			handle: 'td',
 			helper:	'clone',
 			opacity: .6,
 			revert: 250,
-			tabSize: 25,
 			tolerance: 'pointer',
-			maxLevels: 4,
 			expandOnHover: 700,
 			startCollapsed: false,
 			excludeRoot: true,
