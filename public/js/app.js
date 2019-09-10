@@ -446,13 +446,13 @@ class TableApp
 			accept: "tr",
 			drop: function(e, ui) {
 			  var droppedEl = ui.draggable.parents("tr");
-			  this.container..treetable("move", droppedEl.data("ttId"), $(this).data("ttId"));
+			  this.container.treetable("move", droppedEl.data("ttId"), $(this).data("ttId"));
 			},
 			hoverClass: "accept",
 			over: function(e, ui) {
 			  var droppedEl = ui.draggable.parents("tr");
 			  if(this != droppedEl[0] && !$(this).is(".expanded")) {
-				this.container..treetable("expandNode", $(this).data("ttId"));
+				this.container.treetable("expandNode", $(this).data("ttId"));
 			  }
 			}
 		  });
