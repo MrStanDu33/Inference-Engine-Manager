@@ -370,97 +370,14 @@ class TableApp
 	setSortable()
 	{
 		let self = this;
-/*
-		this.container.find("tbody").nestedSortable({
-			forcePlaceholderSize: true,
-			handle: 'td',
-			helper:	'clone',
-			items: 'tr',
-			opacity: .6,
-			placeholder: "sortable-placeholder",
-			revert: 250,
-			tabSize: 25,
-			tolerance: 'pointer',
-			toleranceElement: '> td',
-			isTree: true,
-			expandOnHover: 700,
-			startCollapsed: false,
-			listType: 'tbody',
-			excludeRoot: true,
-			rootID:"root",
+		this.container.find("tbody").sortable(
+		{
+			axis: "y",
 			update(event, ui)
 			{
 				self.testForUpdates();
 			},
-			//axis: "y",
-		});
-
-		$("ol").nestedSortable({
-			forcePlaceholderSize: true,
-			handle: 'div',
-			helper:	'clone',
-			items: 'li',
-			opacity: .6,
-			placeholder: 'placeholder',
-			revert: 250,
-			tabSize: 25,
-			tolerance: 'pointer',
-			toleranceElement: '> div',
-			maxLevels: 4,
-			isTree: true,
-			expandOnHover: 700,
-			startCollapsed: false,
-			listType: 'ol',
-			excludeRoot: true,
-			rootID:"root"
-		});
-		this.container.find("tbody" ).sortable({
-			nested: true,
-			containerPath: "td",
-			containerSelector: '.table',
-			itemPath: '> tbody',
-			itemSelector: 'tr',
-			placeholder: ''
-		});
-		*/
-		this.container.treetable({ expandable: true });
-
-		this.container.find("tbody").on("mousedown", "tr", function()
-		{
-			$(".selected").not(this).removeClass("selected");
-			$(this).toggleClass("selected");
-		});
-		
-		this.container.find("tr").draggable(
-		{
-			helper: "clone",
-			opacity: .75,
-			refreshPositions: true,
-			revert: "invalid",
-			revertDuration: 300,
-			scroll: true
-		});
-		
-		this.container.find("tr").each(function()
-		{
-			$(this).parents("tr").droppable(
-			{
-				accept: "tr",
-				drop: function(e, ui)
-				{
-					var droppedEl = ui.draggable.parents("tr");
-					this.container.treetable("move", droppedEl.data("ttId"), $(this).data("ttId"));
-				},
-				hoverClass: "accept",
-				over: function(e, ui)
-				{
-					var droppedEl = ui.draggable.parents("tr");
-					if(this != droppedEl[0] && !$(this).is(".expanded"))
-					{
-						this.container.treetable("expandNode", $(this).data("ttId"));
-					}
-				}
-			});
+			placeholder: "sortable-placeholder"
 		});
 		this.container.find("tbody" ).disableSelection();
 	}
