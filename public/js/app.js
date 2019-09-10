@@ -409,6 +409,7 @@ class TableApp
 			isTree: true,
 			expandOnHover: 700,
 			startCollapsed: false,
+			listType: 'ol',
 	excludeRoot: true,
 	rootID:"root"
 		});
