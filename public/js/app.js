@@ -374,6 +374,7 @@ class TableApp
 			handle: 'td',
 			items: 'tr',
 			toleranceElement: '> td',
+			listType: 'tbody',
 			update(event, ui)
 			{
 				self.testForUpdates();
