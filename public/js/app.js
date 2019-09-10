@@ -370,13 +370,15 @@ class TableApp
 	setSortable()
 	{
 		let self = this;
-		this.container.find("tbody").sortable(
-		{
-			axis: "y",
+		this.container.find("tbody").nestedSortable({
+			handle: 'td',
+			items: 'tr',
+			toleranceElement: '> td',
 			update(event, ui)
 			{
 				self.testForUpdates();
 			},
+			axis: "y",
 			placeholder: "sortable-placeholder"
 		});
 		this.container.find("tbody" ).disableSelection();
