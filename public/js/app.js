@@ -393,28 +393,24 @@ class TableApp
 			//axis: "y",
 			placeholder: "sortable-placeholder"
 		});
+
 		$("ul").nestedSortable({
+			forcePlaceholderSize: true,
 			handle: 'div',
 			helper:	'clone',
+			items: 'li',
 			opacity: .6,
+			placeholder: 'placeholder',
 			revert: 250,
+			tabSize: 25,
 			tolerance: 'pointer',
+			toleranceElement: '> div',
+			maxLevels: 4,
+			isTree: true,
 			expandOnHover: 700,
 			startCollapsed: false,
-			excludeRoot: true,
-			rootID:"root",
-
-			items: 'li',
-			toleranceElement: '> div',
-			tolerance: 'pointer',
-			isTree: true,
-			listType: 'ul',
-			update(event, ui)
-			{
-				self.testForUpdates();
-			},
-			//axis: "y",
-			placeholder: "sortable-placeholder"
+	excludeRoot: true,
+	rootID:"root"
 		});
 		this.container.find("tbody" ).disableSelection();
 	}
