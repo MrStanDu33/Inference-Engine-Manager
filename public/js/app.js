@@ -414,17 +414,17 @@ class TableApp
 			excludeRoot: true,
 			rootID:"root"
 		});
+		*/
 		this.container.find("tbody" ).disableSelection();
+		this.container.sortable({
+			nested: true,
+			containerPath: "td",
+			containerSelector: '.table',
+			itemPath: '> tbody',
+			itemSelector: 'tr',
+			placeholder: ''
+		});
 	}
-	*/
-	this.container.sortable({
-		nested: true,
-		containerPath: "td",
-		containerSelector: '.table',
-		itemPath: '> tbody',
-		itemSelector: 'tr',
-		placeholder: ''
-	});
 }
 
 $(document).ready(function()
