@@ -394,7 +394,7 @@ class TableApp
 			placeholder: "sortable-placeholder"
 		});
 
-		$("ul").nestedSortable({
+		$("ol").nestedSortable({
 			forcePlaceholderSize: true,
 			handle: 'div',
 			helper:	'clone',
