@@ -370,6 +370,7 @@ class TableApp
 	setSortable()
 	{
 		let self = this;
+/*
 		this.container.find("tbody").nestedSortable({
 			forcePlaceholderSize: true,
 			handle: 'td',
@@ -415,6 +416,15 @@ class TableApp
 		});
 		this.container.find("tbody" ).disableSelection();
 	}
+	*/
+	this.container.sortable({
+		nested: true,
+		containerPath: "td",
+		containerSelector: '.table',
+		itemPath: '> tbody',
+		itemSelector: 'tr',
+		placeholder: ''
+	});
 }
 
 $(document).ready(function()
