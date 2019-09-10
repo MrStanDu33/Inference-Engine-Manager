@@ -371,7 +371,19 @@ class TableApp
 	{
 		let self = this;
 		this.container.find("tbody").nestedSortable({
-			handle: 'td',
+			forcePlaceholderSize: true,
+			handle: 'div',
+			helper:	'clone',
+			opacity: .6,
+			revert: 250,
+			tabSize: 25,
+			tolerance: 'pointer',
+			maxLevels: 4,
+			expandOnHover: 700,
+			startCollapsed: false,
+			excludeRoot: true,
+			rootID:"root",
+
 			items: 'tr',
 			toleranceElement: '> td',
 			tolerance: 'pointer',
