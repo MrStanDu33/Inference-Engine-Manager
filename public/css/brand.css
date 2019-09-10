@@ -207,3 +207,9 @@ button.tertiary:focus
 button.primary:focus
 {
 }
+
+table tbody tr.sortable-placeholder
+{
+	border-color: #EF0739;
+	background-color: rgba(239, 7, 57, 0.2);
+}

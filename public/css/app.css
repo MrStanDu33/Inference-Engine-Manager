@@ -190,5 +190,6 @@ table tbody tr div.relative i:hover
 
 table tbody tr.sortable-placeholder
 {
-	background-color: red;
+	border-radius: 5px;
+	border: 5px dashed;
 }
