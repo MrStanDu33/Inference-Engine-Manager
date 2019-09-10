@@ -371,27 +371,27 @@ class TableApp
 	{
 		let self = this;
 		this.container.find("tbody").nestedSortable({
+			forcePlaceholderSize: true,
 			handle: 'td',
 			helper:	'clone',
+			items: 'tr',
 			opacity: .6,
+			placeholder: "sortable-placeholder",
 			revert: 250,
+			tabSize: 25,
 			tolerance: 'pointer',
+			toleranceElement: '> td',
+			isTree: true,
 			expandOnHover: 700,
 			startCollapsed: false,
+			listType: 'tbody',
 			excludeRoot: true,
 			rootID:"root",
-
-			items: 'tr',
-			toleranceElement: '> td',
-			tolerance: 'pointer',
-			isTree: true,
-			listType: 'tbody',
 			update(event, ui)
 			{
 				self.testForUpdates();
 			},
 			//axis: "y",
-			placeholder: "sortable-placeholder"
 		});
 
 		$("ol").nestedSortable({
