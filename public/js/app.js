@@ -374,6 +374,8 @@ class TableApp
 			handle: 'td',
 			items: 'tr',
 			toleranceElement: '> td',
+			tolerance: 'pointer',
+			isTree: true,
 			listType: 'tbody',
 			update(event, ui)
 			{
