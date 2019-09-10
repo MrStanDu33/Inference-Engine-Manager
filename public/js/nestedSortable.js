@@ -157,7 +157,7 @@
 			    level = this._getLevel(this.placeholder),
 			    childLevels = this._getChildLevels(this.helper);
 
-			var newList = document.createElement(o.listType);
+			var newList = document.createElement("ul");
 
 			//Rearrange
 			for (i = this.items.length - 1; i >= 0; i--) {
