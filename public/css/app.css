@@ -132,6 +132,12 @@ table tr:not(.controls) td
 	min-width: 280px;
 }
 
+table tr
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
 table tr:not(.controls) td input
 {
 	color: #333;
@@ -191,5 +197,5 @@ table tbody tr div.relative i:hover
 table tbody tr.sortable-placeholder
 {
 	border-radius: 5px;
-	border: 5px dashed;
+	opacity: 0.2;
 }
