@@ -410,8 +410,8 @@ class TableApp
 			expandOnHover: 700,
 			startCollapsed: false,
 			listType: 'ol',
-	excludeRoot: true,
-	rootID:"root"
+			excludeRoot: true,
+			rootID:"root"
 		});
 		this.container.find("tbody" ).disableSelection();
 	}
