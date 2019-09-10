@@ -393,6 +393,29 @@ class TableApp
 			//axis: "y",
 			placeholder: "sortable-placeholder"
 		});
+		$("ul").nestedSortable({
+			handle: 'div',
+			helper:	'clone',
+			opacity: .6,
+			revert: 250,
+			tolerance: 'pointer',
+			expandOnHover: 700,
+			startCollapsed: false,
+			excludeRoot: true,
+			rootID:"root",
+
+			items: 'li',
+			toleranceElement: '> div',
+			tolerance: 'pointer',
+			isTree: true,
+			listType: 'ul',
+			update(event, ui)
+			{
+				self.testForUpdates();
+			},
+			//axis: "y",
+			placeholder: "sortable-placeholder"
+		});
 		this.container.find("tbody" ).disableSelection();
 	}
 }
