@@ -187,3 +187,8 @@ table tbody tr div.relative i:hover
 	color: #EF0739;
 	transition: all 0.1s linear;
 }
+
+table tbody td.sortable-placeholder
+{
+	background-color: red;
+}
