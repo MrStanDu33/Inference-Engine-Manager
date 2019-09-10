@@ -416,7 +416,7 @@ class TableApp
 		});
 		*/
 		this.container.find("tbody" ).disableSelection();
-		this.container.sortable({
+		this.container.find("tbody" ).sortable({
 			nested: true,
 			containerPath: "td",
 			containerSelector: '.table',
