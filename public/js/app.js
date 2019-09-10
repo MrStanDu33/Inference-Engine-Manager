@@ -379,7 +379,7 @@ class TableApp
 			{
 				self.testForUpdates();
 			},
-			axis: "y",
+			//axis: "y",
 			placeholder: "sortable-placeholder"
 		});
 		this.container.find("tbody" ).disableSelection();
