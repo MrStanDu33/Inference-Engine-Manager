@@ -414,8 +414,6 @@ class TableApp
 			excludeRoot: true,
 			rootID:"root"
 		});
-		*/
-		this.container.find("tbody" ).disableSelection();
 		this.container.find("tbody" ).sortable({
 			nested: true,
 			containerPath: "td",
@@ -424,6 +422,42 @@ class TableApp
 			itemSelector: 'tr',
 			placeholder: ''
 		});
+		*/
+		this.container.treetable({ expandable: true });
+
+		// Highlight selected row
+		this.container.find("tbody").on("mousedown", "tr", function() {
+		  $(".selected").not(this).removeClass("selected");
+		  $(this).toggleClass("selected");
+		});
+		
+		// Drag & Drop Example Code
+		this.container.find("tr").draggable({
+			helper: "clone",
+			opacity: .75,
+			refreshPositions: true,
+			revert: "invalid",
+			revertDuration: 300,
+			scroll: true
+		  });
+		
+		this.container.find("tr").each(function() {
+		  $(this).droppable({
+			accept: "tr",
+			drop: function(e, ui) {
+			  var droppedEl = ui.draggable.parents("tr");
+			  this.container..treetable("move", droppedEl.data("ttId"), $(this).data("ttId"));
+			},
+			hoverClass: "accept",
+			over: function(e, ui) {
+			  var droppedEl = ui.draggable.parents("tr");
+			  if(this != droppedEl[0] && !$(this).is(".expanded")) {
+				this.container..treetable("expandNode", $(this).data("ttId"));
+			  }
+			}
+		  });
+		});
+		this.container.find("tbody" ).disableSelection();
 	}
 }
 
