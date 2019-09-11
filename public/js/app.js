@@ -207,7 +207,7 @@ class TableApp
 		{
 			if (typeof index == "object")
 			{
-				self.container.find("tbody").append("<tr class=\"working\"></tr>");
+				self.container.find("tbody").append("<tr class=\"working dd-item\"></tr>");
 				index.forEach(function(subIndex)
 				{
 					self.container.find("tbody tr.working").append("<td data-header=\""+self.header[i]+"\">"+subIndex+"</td>");
@@ -222,7 +222,7 @@ class TableApp
 			}
 			else
 			{
-				self.container.find("tbody").append("<tr><td data-header=\""+self.header[i]+"\">"+index+"</td></tr>");
+				self.container.find("tbody").append("<tr class=\"dd-item\"><td data-header=\""+self.header[i]+"\">"+index+"</td></tr>");
 				i++;
 			}
 		});
@@ -370,7 +370,7 @@ class TableApp
 	setSortable()
 	{
 		let self = this;
-		this.container.find("tbody").sortable(
+/*		this.container.find("tbody").sortable(
 		{
 			axis: "y",
 			update(event, ui)
@@ -380,6 +380,8 @@ class TableApp
 			placeholder: "sortable-placeholder",
 			nestable: true
 		});
+*/
+		$('#nestable').nestable();
 		this.container.find("tbody" ).disableSelection();
 	}
 }
