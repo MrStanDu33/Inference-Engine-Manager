@@ -36,7 +36,6 @@
     placeClass: 'dd-placeholder',
     noDragClass: 'dd-nodrag',
     emptyClass: 'dd-empty',
-    expandBtnHTML: '<button data-action="expand" type="button">Expand</button>',
     placeElementDefault: '<tr class="dd-placeholder"><td>&nbsp;</td></tr>',
     group: 0,
     maxDepth: 100,
