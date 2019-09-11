@@ -381,7 +381,7 @@ class TableApp
 			nestable: true
 		});
 */
-		$('#nestable').nestable();
+		this.container.nestable();
 		this.container.find("tbody" ).disableSelection();
 	}
 }
