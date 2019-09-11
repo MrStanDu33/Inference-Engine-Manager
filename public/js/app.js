@@ -377,7 +377,8 @@ class TableApp
 			{
 				self.testForUpdates();
 			},
-			placeholder: "sortable-placeholder"
+			placeholder: "sortable-placeholder",
+			nestable: true
 		});
 		this.container.find("tbody" ).disableSelection();
 	}
