@@ -105,6 +105,11 @@ ul#listActions a
 	width: 100%;
 }
 
+div.dd
+{
+	width: max-content;
+}
+
 table
 {
 	color: #333;
