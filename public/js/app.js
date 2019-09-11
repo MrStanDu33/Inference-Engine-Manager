@@ -210,7 +210,7 @@ class TableApp
 				self.container.find("tbody").append("<tr class=\"working dd-item\"></tr>");
 				index.forEach(function(subIndex)
 				{
-					self.container.find("tbody tr.working").append("<td data-header=\""+self.header[i]+"\">"+subIndex+"</td>");
+					self.container.find("tbody tr.working").append("<td class=\"dd-handle\" data-header=\""+self.header[i]+"\">"+subIndex+"</td>");
 					i++;
 				});
 				self.container.find("tbody tr.working td:not(.editing)").each(function()
@@ -222,7 +222,7 @@ class TableApp
 			}
 			else
 			{
-				self.container.find("tbody").append("<tr class=\"dd-item\"><td data-header=\""+self.header[i]+"\">"+index+"</td></tr>");
+				self.container.find("tbody").append("<tr class=\"dd-item\"><td class=\"dd-handle\" data-header=\""+self.header[i]+"\">"+index+"</td></tr>");
 				i++;
 			}
 		});
