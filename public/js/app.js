@@ -383,7 +383,6 @@ class TableApp
 		});
 */
 		this.container.nestable({
-			axis: "y",
 			update(event, ui)
 			{
 				self.testForUpdates();
