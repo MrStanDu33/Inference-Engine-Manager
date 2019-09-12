@@ -218,7 +218,7 @@ class TableApp
 				{
 					self.setEditableContent($(this));
 				});
-				self.setRemovableElement(self.container.find("tbody tr.working"));
+				self.setRemovableElement(self.container.find("tr.working"));
 				self.container.find("tbody tr.working").removeClass("working");
 			}
 			else
