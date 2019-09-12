@@ -145,7 +145,7 @@ class TableApp
 			});
 		}, function()
 		{
-			$(this).find(".mdi-delete").parent().remove();
+			$(this).find(".mdi-delete").first().parent().remove();
 		});
 	}
 
