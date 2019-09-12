@@ -33,10 +33,10 @@
     itemClass: 'dd-item',
     dragClass: 'dd-dragel',
     handleClass: 'dd-handle',
-    placeClass: 'dd-placeholder',
+    placeClass: 'sortable-placeholder',
     noDragClass: 'dd-nodrag',
     emptyClass: 'dd-empty',
-    placeElementDefault: '<tr class="dd-placeholder"><td>&nbsp;</td></tr>',
+    placeElementDefault: '<tr class="sortable-placeholder"><td>&nbsp;</td></tr>',
     group: 0,
     maxDepth: 100,
     threshold: 20

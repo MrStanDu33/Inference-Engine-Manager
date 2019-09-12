@@ -180,6 +180,11 @@ table tr.controls td div.relative i.mdi-close
 	right: 25px;
 }
 
+table>tbody>tr:hover
+{
+	background-color: #F5F5F5
+}
+
 table tbody tr div.relative i
 {
 	top: -30px;
@@ -188,7 +193,7 @@ table tbody tr div.relative i
 	transition: all 0.1s linear;
 }
 
-div.relative i:hover
+div.relative>i:hover
 {
 	color: #EF0739;
 	transition: all 0.1s linear;

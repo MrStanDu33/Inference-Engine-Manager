@@ -381,7 +381,14 @@ class TableApp
 			nestable: true
 		});
 */
-		this.container.nestable();
+		this.container.nestable({
+			axis: "y",
+			update(event, ui)
+			{
+				self.testForUpdates();
+			},
+			placeholder: "sortable-placeholder",
+		});
 		this.container.find("tbody" ).disableSelection();
 	}
 }
