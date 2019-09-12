@@ -130,7 +130,7 @@ class TableApp
 		element.hover(function(e)
 		{
 			e.stopPropagation();
-			$(this).find("td:last-of-type").append("<div class=\"relative\"><i class=\"mdi mdi-delete absolute pointer\"></i></div>");
+			$(this).find("td:last-of-type").first().append("<div class=\"relative\"><i class=\"mdi mdi-delete absolute pointer\"></i></div>");
 			$(this).find("div.relative i.mdi-delete").click(function(e)
 			{
 				e.preventDefault();
